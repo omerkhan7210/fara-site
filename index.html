@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fara Foroghi | Realtor | SRS, ABR, CREN</title>
+<meta name="description" content="Fara Foroghi is a realtor with ten years in the business and three designations: SRS, ABR and CREN. Buying, selling and downsizing, planned and negotiated with care.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#2b3a20">
+<meta property="og:title" content="Fara Foroghi | Realtor">
+<meta property="og:description" content="Ten years in the business. Three designations. Buying, selling and downsizing, planned with care.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@800&family=Onest:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ddd6c6; --surface:#d2cab8; --ink:#2a2a26; --muted:#59574e;
+  --accent:#4f6238; --accent-ink:#fff;
+  --field:#2b3a20; --field-ink:#ddd6c6; --field-soft:#a9c08a;
+  --night:#2a2a26; --lamp:#f0b84a;
+  --m:clamp(16px,2.5vw,32px);
+  --step-small:clamp(.875rem,.85rem + .1vw,.9375rem);
+  --step-body:clamp(1.0625rem,1rem + .25vw,1.1875rem);
+  --step-lead:clamp(1.375rem,1rem + 1.5vw,2.25rem);
+  --step-head:clamp(2.25rem,1.2rem + 4.4vw,4.75rem);
+  --mono:12vw;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font:400 var(--step-body)/1.55 "Onest",system-ui,sans-serif;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+h1,h2,h3{font-weight:400}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:clamp(8px,1.6vw,24px);padding-inline:var(--m)}
+:focus-visible{outline:3px solid var(--lamp);outline-offset:3px}
+::selection{background:var(--accent);color:#fff}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* icons */
+.sym{width:1.2em;height:1.2em;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.ico{display:grid;place-items:center;width:56px;height:56px;flex:none;background:var(--accent);color:#fff;font-size:28px}
+
+/* buttons: one shape, square */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:0 28px;border:0;border-radius:0;background:var(--accent);color:var(--accent-ink);font:500 var(--step-body)/1 "Onest",sans-serif;cursor:pointer;transition:transform .25s cubic-bezier(.2,.7,.2,1),background .25s}
+.btn:hover{transform:translateY(-3px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn.sand{background:var(--field-ink);color:var(--field)}
+.btn .sym{transition:transform .25s}
+.btn:hover .sym{transform:translateX(4px)}
+
+/* HERO */
+.hero{background:var(--field);color:var(--field-ink);min-height:100svh;position:relative;display:flex;flex-direction:column;padding:0 var(--m);overflow:hidden}
+.top{display:flex;justify-content:space-between;align-items:center;min-height:72px;font-size:var(--step-small)}
+.top .mark{font:800 var(--step-body)/1 "Unbounded",sans-serif;min-height:44px;display:inline-flex;align-items:center;letter-spacing:-.03em}
+.top nav{display:flex;align-items:center;gap:clamp(14px,2.4vw,36px)}
+.top nav a:not(.btn){min-height:44px;display:inline-flex;align-items:center;transition:color .2s}
+.top nav a:not(.btn):hover{color:var(--lamp)}
+.top .btn{min-height:44px;padding:0 20px;font-size:var(--step-small)}
+.hide-sm{display:inline-flex}
+.mono{font-family:"Unbounded",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-.045em;line-height:.84;font-size:var(--mono);margin-top:clamp(36px,9vh,120px);white-space:nowrap}
+.ln{display:block;overflow:hidden;padding-top:.04em;margin-top:-.04em}
+.ln>span{display:block;transform:translateY(106%);transition:transform .95s cubic-bezier(.16,1,.3,1)}
+.ln.l1{color:var(--field-ink)}
+.ln.l2{color:var(--field-soft)}
+.ln.l2>span{transition-delay:.11s}
+.go .ln>span{transform:none}
+.mono i{font-style:normal;transition:color .8s ease}
+.mono i.on{color:var(--lamp)}
+.hero-foot{margin-top:auto;display:grid;grid-template-columns:repeat(12,1fr);column-gap:clamp(8px,1.6vw,24px);padding-bottom:40px;align-items:end}
+.hero-foot p{grid-column:9/13;font-size:var(--step-body);max-width:30ch;margin-left:auto;text-align:right}
+.hero-foot .cta{display:none}
+.rise{opacity:0;transform:translateY(16px);transition:opacity .8s ease .55s,transform .8s cubic-bezier(.16,1,.3,1) .55s}
+.go .rise{opacity:1;transform:none}
+
+.pic{background:var(--surface);overflow:hidden}
+.pic img{width:100%;height:100%;object-fit:cover}
+
+/* INTRO */
+.intro{padding-block:clamp(72px,10vw,140px)}
+.intro .pic{grid-column:1/6;aspect-ratio:4/5;align-self:start}
+.intro .txt{grid-column:7/13}
+.intro h2{font-size:var(--step-head);line-height:1.02;letter-spacing:-.03em}
+.intro .note{margin-top:clamp(20px,2.4vw,32px);max-width:44ch}
+.facts{display:grid;gap:clamp(28px,3.2vw,44px);margin-top:clamp(40px,5vw,72px)}
+.fact{display:grid;grid-template-columns:56px 1fr;column-gap:20px;align-items:start}
+.fact b{display:block;font:400 var(--step-lead)/1.1 "Onest",sans-serif;letter-spacing:-.02em}
+.fact div>span{display:block;margin-top:6px;max-width:38ch}
+
+/* LIVE: lights */
+.lights{background:var(--surface);padding-block:clamp(72px,10vw,140px)}
+.lights h2{grid-column:1/13;font-size:var(--step-head);line-height:1.02;letter-spacing:-.03em;margin-bottom:clamp(32px,5vw,64px)}
+.pick{grid-column:1/5;display:grid;align-content:start;gap:8px}
+.light{display:flex;align-items:center;gap:clamp(14px,1.6vw,22px);width:100%;min-height:84px;padding:8px 0;background:none;border:0;border-radius:0;color:var(--ink);font:400 var(--step-body)/1.2 "Onest",sans-serif;text-align:left;cursor:pointer;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.light:hover{transform:translateX(8px)}
+.win{flex:none;width:64px;aspect-ratio:1;background:var(--night);color:var(--field-ink);display:grid;place-items:center;font-size:30px;transition:background .5s,color .5s}
+.light[aria-pressed="true"] .win{background:var(--lamp);color:var(--night)}
+.light[aria-pressed="true"]{font-weight:500}
+.shot{grid-column:5/9;aspect-ratio:4/5;position:relative;background:var(--bg);overflow:hidden}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s ease}
+.shot img.show{opacity:1}
+.out{grid-column:9/13;align-self:center}
+.out [data-for]{display:none}
+.out [data-for].show{display:block;animation:in .6s cubic-bezier(.16,1,.3,1)}
+.out b{display:block;font:800 var(--step-head)/1 "Unbounded",sans-serif;letter-spacing:-.04em;margin-bottom:20px}
+.out p{margin-bottom:28px}
+@keyframes in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* SERVICES */
+.svc-head{padding-block:clamp(72px,10vw,140px) clamp(40px,5vw,72px)}
+.svc-head h2{grid-column:1/13;font-size:var(--step-head);line-height:1.02;letter-spacing:-.03em}
+.grp{padding-block:clamp(44px,5.5vw,80px)}
+.grp:nth-of-type(odd){background:var(--surface)}
+.gl{grid-column:1/6;display:flex;gap:clamp(16px,2vw,28px);align-items:flex-start}
+.gl h3{font-size:var(--step-head);line-height:1;letter-spacing:-.03em}
+.gl small{display:block;margin-top:12px;font-size:var(--step-small);font-weight:500;color:var(--accent)}
+.gr{grid-column:7/13}
+.gr li{display:flex;gap:16px;align-items:flex-start;font-size:var(--step-lead);line-height:1.2;letter-spacing:-.02em;padding-block:clamp(14px,1.6vw,22px)}
+.gr li .sym{color:var(--accent);margin-top:.12em;font-size:1em}
+.svc-end{height:clamp(72px,10vw,140px)}
+
+/* STEPS */
+.steps{padding-block:clamp(40px,5vw,72px) clamp(88px,11vw,160px)}
+.stage h2{font-size:var(--step-head);line-height:1.02;letter-spacing:-.03em}
+.stage p{margin-top:12px;max-width:34ch;font-size:var(--step-body)}
+.s1{grid-column:1/13}.s2{grid-column:3/13}.s3{grid-column:5/13}.s4{grid-column:7/13}
+.stage+.stage{margin-top:clamp(40px,4.4vw,64px)}
+.steps .pic{grid-column:1/6;grid-row:4;align-self:end;aspect-ratio:4/5}
+
+/* FAQ */
+.faq{padding-block:clamp(40px,6vw,80px) clamp(88px,11vw,160px)}
+.q{display:grid;grid-template-columns:repeat(12,1fr);column-gap:clamp(8px,1.6vw,24px);padding-inline:var(--m);margin-bottom:clamp(56px,6vw,88px)}
+.q h3,.q h2{grid-column:1/7;font-size:var(--step-lead);line-height:1.1;letter-spacing:-.02em;font-weight:500}
+.q h2{color:var(--muted);font-weight:400}
+.q p{grid-column:8/13;max-width:40ch}
+
+/* CONTACT */
+.row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;min-height:clamp(84px,10.4vw,150px);padding:0 var(--m) clamp(10px,1.6vw,22px);font-size:var(--step-head);line-height:1;letter-spacing:-.035em}
+.row:nth-child(even){background:var(--surface)}
+.formwrap{padding-block:clamp(72px,10vw,140px)}
+.side{grid-column:1/6}
+.side h2{font-size:var(--step-head);line-height:1.02;letter-spacing:-.03em}
+.side>p{margin-top:20px;max-width:34ch}
+.info{margin-top:clamp(28px,3vw,44px);display:grid;gap:8px}
+.info li{display:flex;align-items:center;gap:16px;min-height:52px}
+.info .ico{width:48px;height:48px;font-size:24px}
+.side .pic{margin-top:clamp(32px,4vw,56px);aspect-ratio:3/2}
+form{grid-column:7/13;display:grid;gap:20px;align-content:start}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.f{display:grid;gap:8px}
+.f label{font-weight:500}
+.f input,.f select,.f textarea{font:400 var(--step-body)/1.4 "Onest",sans-serif;color:var(--ink);background:var(--surface);border:0;border-radius:0;padding:16px 18px;min-height:56px;width:100%;appearance:none;-webkit-appearance:none}
+.f select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' stroke='%232a2a26' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 7l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:48px}
+.f textarea{min-height:150px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{outline:3px solid var(--accent);outline-offset:0}
+form .btn{justify-self:start;min-height:56px}
+.ok{background:var(--accent);color:#fff;padding:18px 20px}
+.ok[hidden]{display:none}
+
+/* FOOTER */
+footer{background:var(--night);color:var(--field-ink);min-height:100svh;position:relative;overflow:hidden;padding:clamp(64px,10vw,140px) var(--m) 0;display:flex;flex-direction:column}
+.invite{display:grid;grid-template-columns:repeat(12,1fr);column-gap:clamp(8px,1.6vw,24px)}
+.invite .l{grid-column:1/8}
+.invite h2{font-size:var(--step-head);line-height:1.02;letter-spacing:-.03em}
+.invite .btn{margin-top:clamp(24px,3vw,40px)}
+.invite ul{grid-column:10/13;font-size:var(--step-body)}
+.invite li a{display:inline-flex;align-items:center;gap:10px;min-height:44px;transition:color .2s}
+.invite li a:hover{color:var(--lamp)}
+.credits{margin-top:auto;display:flex;justify-content:space-between;gap:16px 32px;flex-wrap:wrap;font-size:var(--step-small);padding-bottom:14px;color:#c9c3b3}
+.cropname{font-family:"Unbounded",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-.06em;line-height:.8;white-space:nowrap;font-size:var(--foot,26vw);transform:translateY(30%);margin-left:-.04em;user-select:none}
+.cropname i{font-style:normal;color:var(--lamp)}
+
+/* reveal */
+[data-r]{opacity:0;transform:translateY(24px);transition:opacity .8s ease var(--d,0s),transform .9s cubic-bezier(.16,1,.3,1) var(--d,0s)}
+[data-r].in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  [data-r],.rise{opacity:1;transform:none;transition:none}
+  .ln>span{transform:none;transition:none}
+  .out [data-for].show{animation:none}
+}
+
+/* PHONE + TABLET */
+@media (max-width:860px){
+  :root{--mono:21vw}
+  .hide-sm,.top nav a:not(.keep){display:none}
+  .top .btn{display:none}
+  .mono{margin-top:18svh}
+  .hero-foot{display:block;padding-bottom:24px}
+  .hero-foot p{text-align:left;margin:0;max-width:34ch}
+  .hero-foot .cta{display:inline-flex;margin-top:24px;width:100%}
+  .intro .pic,.intro .txt{grid-column:1/13}
+  .intro .txt{margin-top:40px}
+  .pick,.shot,.out{grid-column:1/13}
+  .shot{margin-top:24px;aspect-ratio:4/3}
+  .out{margin-top:32px}
+  .gl,.gr{grid-column:1/13}
+  .gr{margin-top:16px}
+  .s1,.s2,.s3,.s4{grid-column:1/13}
+  .s2{padding-left:6vw}.s3{padding-left:12vw}.s4{padding-left:18vw}
+  .stage+.stage{margin-top:40px}
+  .steps .pic{grid-column:1/13;grid-row:auto;margin-top:48px}
+  .q{display:block;margin-bottom:56px}
+  .q p{margin-top:12px;max-width:none}
+  .row{min-height:84px}
+  .side,form{grid-column:1/13}
+  form{margin-top:48px}
+  .two{grid-template-columns:1fr}
+  form .btn{width:100%;justify-self:stretch}
+  .invite .l,.invite ul{grid-column:1/13}
+  .invite ul{margin-top:32px;display:flex;flex-wrap:wrap;gap:0 24px;font-size:var(--step-small)}
+  .invite .btn{width:100%}
+  .cropname{transform:translateY(24%)}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10M10 20v-6h4v6"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.6 13.4l-7.2 7.2a2 2 0 01-2.8 0L3 13V4h9l8.6 8.6a2 2 0 010 2.8z"/><circle cx="7.5" cy="7.5" r="1"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 5.8-8 11-8 11z"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3M14 9l2 2"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M6 21h12M5 7h14M5 7l-3 7a3 3 0 006 0L5 7zM19 7l-3 7a3 3 0 006 0l-3-7z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3L3 10.5l7 3 3 7L21 3zM10 13.5L21 3"/></symbol>
+</svg>
+
+<header class="hero" id="top">
+  <div class="top">
+    <a class="mark" href="#top" aria-label="Fara Foroghi, home">FF</a>
+    <nav aria-label="Primary">
+      <a href="#credentials">Credentials</a>
+      <a href="#services">Services</a>
+      <a href="#questions">Questions</a>
+      <a class="keep" href="#contact">Contact</a>
+      <a class="btn sand hide-sm" href="#lights">Start here <svg class="sym" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </nav>
+  </div>
+  <h1 class="mono" id="name" aria-label="Fara Foroghi">
+    <span class="ln l1" aria-hidden="true"><span>Fara</span></span>
+    <span class="ln l2" aria-hidden="true"><span>F<i>o</i>r<i>o</i>ghi</span></span>
+  </h1>
+  <div class="hero-foot">
+    <p class="rise">A realtor with ten years in the business, helping people buy, sell and move on well.</p>
+    <a class="btn sand cta rise" href="#lights">Start here <svg class="sym" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</header>
+
+<main>
+  <section class="intro" id="credentials" aria-labelledby="h-intro">
+    <div class="grid">
+      <div class="pic" data-r><img src="https://picsum.photos/id/78/1000/1250" width="1000" height="1250" alt="A carved wooden double door set in an old stone facade" fetchpriority="low" loading="lazy" onerror="this.remove()"></div>
+      <div class="txt">
+        <h2 id="h-intro" data-r>Three credentials, ten years.</h2>
+        <p class="note" data-r style="--d:.1s">Fara Foroghi has spent a decade helping people buy, sell and move. Each of her designations answers a question clients actually ask.</p>
+        <ul class="facts">
+          <li class="fact" data-r><span class="ico"><svg class="sym" aria-hidden="true"><use href="#i-heart"/></svg></span><div><b>SRS</b><span>Seniors Real Estate Specialist. Moving after many years in one home.</span></div></li>
+          <li class="fact" data-r><span class="ico"><svg class="sym" aria-hidden="true"><use href="#i-search"/></svg></span><div><b>ABR</b><span>Accredited Buyer's Representative. Someone on your side of the search.</span></div></li>
+          <li class="fact" data-r><span class="ico"><svg class="sym" aria-hidden="true"><use href="#i-scale"/></svg></span><div><b>CREN</b><span>A negotiation designation. A plan for every offer and counteroffer.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="lights" id="lights" aria-labelledby="h-lights">
+    <div class="grid">
+      <h2 id="h-lights" data-r>What are you planning?</h2>
+      <div class="pick" role="group" aria-label="Choose your move" data-r>
+        <button class="light" type="button" data-k="buy" aria-pressed="true"><span class="win" aria-hidden="true"><svg class="sym"><use href="#i-key"/></svg></span>Buying a home</button>
+        <button class="light" type="button" data-k="sell" aria-pressed="false"><span class="win" aria-hidden="true"><svg class="sym"><use href="#i-tag"/></svg></span>Selling a home</button>
+        <button class="light" type="button" data-k="down" aria-pressed="false"><span class="win" aria-hidden="true"><svg class="sym"><use href="#i-home"/></svg></span>Moving after many years</button>
+      </div>
+      <div class="shot" aria-hidden="true">
+        <img class="show" data-k="buy" src="https://picsum.photos/id/946/1000/1250" width="1000" height="1250" alt="" loading="lazy" onerror="this.remove()">
+        <img data-k="sell" src="https://picsum.photos/id/625/1000/1250" width="1000" height="1250" alt="" loading="lazy" onerror="this.remove()">
+        <img data-k="down" src="https://picsum.photos/id/832/1000/1250" width="1000" height="1250" alt="" loading="lazy" onerror="this.remove()">
+      </div>
+      <div class="out" aria-live="polite">
+        <div data-for="buy" class="show"><b>ABR</b><p>A search that starts with what you actually need, honest opinions at every viewing, and an offer strategy built before you write the number.</p><a class="btn" data-mail href="#contact">Talk to Fara <svg class="sym" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        <div data-for="sell"><b>CREN</b><p>Pricing and preparation planned together, showings handled with care, and every offer negotiated from a plan instead of a reaction.</p><a class="btn" data-mail href="#contact">Talk to Fara <svg class="sym" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        <div data-for="down"><b>SRS</b><p>A timeline that respects the home you are leaving, space for the family to be involved, and the practical details handled one at a time.</p><a class="btn" data-mail href="#contact">Talk to Fara <svg class="sym" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc" id="services" aria-labelledby="h-services">
+    <div class="grid svc-head"><h2 id="h-services" data-r>What Fara does</h2></div>
+
+    <div class="grp"><div class="grid">
+      <div class="gl" data-r><span class="ico"><svg class="sym" aria-hidden="true"><use href="#i-key"/></svg></span><div><h3>Buying</h3><small>ABR</small></div></div>
+      <ul class="gr">
+        <li data-r><svg class="sym" aria-hidden="true"><use href="#i-check"/></svg>Search and shortlist</li>
+        <li data-r><svg class="sym" aria-hidden="true"><use href="#i-check"/></svg>Viewings and honest opinions</li>
+        <li data-r><svg class="sym" aria-hidden="true"><use href="#i-check"/></svg>Offer strategy that is planned first</li>
+      </ul>
+    </div></div>
+
+    <div class="grp"><div class="grid">
+      <div class="gl" data-r><span class="ico"><svg class="sym" aria-hidden="true"><use href="#i-tag"/></svg></span><div><h3>Selling</h3><small>CREN and ten years</small></div></div>
+      <ul class="gr">
+        <li data-r><svg class="sym" aria-hidden="true"><use href="#i-check"/></svg>Pricing and preparation</li>
+        <li data-r><svg class="sym" aria-hidden="true"><use href="#i-check"/></svg>Listing, showings and offers</li>
+        <li data-r><svg class="sym" aria-hidden="true"><use href="#i-check"/></svg>Counteroffers and conditions, negotiated</li>
+      </ul>
+    </div></div>
+
+    <div class="grp"><div class="grid">
+      <div class="gl" data-r><span class="ico"><svg class="sym" aria-hidden="true"><use href="#i-heart"/></svg></span><div><h3>Moving later</h3><small>SRS</small></div></div>
+      <ul class="gr">
+        <li data-r><svg class="sym" aria-hidden="true"><use href="#i-check"/></svg>A timeline for a long-time home</li>
+        <li data-r><svg class="sym" aria-hidden="true"><use href="#i-check"/></svg>Including the family in the decision</li>
+        <li data-r><svg class="sym" aria-hidden="true"><use href="#i-check"/></svg>Selling and buying together</li>
+      </ul>
+    </div></div>
+
+    <div class="grp"><div class="grid">
+      <div class="gl" data-r><span class="ico"><svg class="sym" aria-hidden="true"><use href="#i-home"/></svg></span><div><h3>Every move</h3><small>Ten years</small></div></div>
+      <ul class="gr">
+        <li data-r><svg class="sym" aria-hidden="true"><use href="#i-check"/></svg>Updates in plain language</li>
+        <li data-r><svg class="sym" aria-hidden="true"><use href="#i-check"/></svg>Handover, and a call afterwards</li>
+      </ul>
+    </div></div>
+    <div class="svc-end"></div>
+  </section>
+
+  <section class="steps" aria-label="How it works">
+    <div class="grid">
+      <div class="stage s1" data-r><h2>First we talk.</h2><p>No forms and no pressure. You describe the move, Fara asks questions.</p></div>
+      <div class="stage s2" data-r><h2>Then we plan.</h2><p>Price, timing and next steps in plain language, before anything is listed or viewed.</p></div>
+      <div class="stage s3" data-r><h2>Then I negotiate.</h2><p>Every offer and counteroffer gets a strategy first, and a reply second.</p></div>
+      <div class="stage s4" data-r><h2>Then you move.</h2><p>Keys, handover, and a call afterwards to make sure all is well.</p></div>
+      <div class="pic" data-r><img src="https://picsum.photos/id/859/1000/1250" width="1000" height="1250" alt="A red brick home with a cream front door and red shutters" loading="lazy" onerror="this.remove()"></div>
+    </div>
+  </section>
+
+  <section class="faq" id="questions" aria-labelledby="h-faq">
+    <div class="q" data-r><h2 id="h-faq">Good questions</h2><span></span></div>
+    <div class="q" data-r><h3>What does SRS mean if I am selling a long-time home?</h3><p>Seniors Real Estate Specialist training covers the decisions that come with moving after many years: timing, family involvement, right-sizing and the practical details. Fara works through them at your pace.</p></div>
+    <div class="q" data-r><h3>What does a buyer's representative do?</h3><p>The ABR designation is about being on the buyer's side of the table through the search, the offer and the close, with opinions you can rely on.</p></div>
+    <div class="q" data-r><h3>What is CREN, in practice?</h3><p>It is Fara's negotiation designation, and the reason offers and counteroffers get a plan before they get a reply.</p></div>
+    <div class="q" data-r><h3>Can you help me sell and buy at the same time?</h3><p>Yes. The two timelines are planned together so one does not leave you stranded by the other.</p></div>
+    <div class="q" data-r><h3>What happens in the first conversation?</h3><p>You describe the move, Fara asks questions, and you leave with a rough plan and timeline.</p></div>
+  </section>
+
+  <section class="contact" id="contact" aria-label="Contact">
+    <div class="row"><span data-r>Fara Foroghi</span></div>
+    <div class="row"><span data-r>Realtor</span></div>
+    <div class="row"><span data-r>SRS, ABR, CREN</span></div>
+    <div class="row"><span data-r>A decade in the business</span></div>
+
+    <div class="formwrap"><div class="grid">
+      <div class="side">
+        <h2 data-r>Say hello.</h2>
+        <p data-r>Tell Fara a little about your plans and she will get back to you personally.</p>
+        <ul class="info" data-r>
+          <li><span class="ico"><svg class="sym" aria-hidden="true"><use href="#i-mail"/></svg></span>fara@example.com</li>
+          <li><span class="ico"><svg class="sym" aria-hidden="true"><use href="#i-phone"/></svg></span>+1 (000) 000-0000</li>
+          <li><span class="ico"><svg class="sym" aria-hidden="true"><use href="#i-pin"/></svg></span>Your city and brokerage</li>
+        </ul>
+        <div class="pic" data-r><img src="https://picsum.photos/id/947/1200/800" width="1200" height="800" alt="A whitewashed rooftop terrace with a clay pot" loading="lazy" onerror="this.remove()"></div>
+      </div>
+
+      <form id="hello" action="mailto:" method="post" enctype="text/plain" data-r>
+        <div class="two">
+          <div class="f"><label for="n">Full name</label><input id="n" name="name" autocomplete="name" required></div>
+          <div class="f"><label for="e">Email</label><input id="e" type="email" name="email" autocomplete="email" required></div>
+        </div>
+        <div class="two">
+          <div class="f"><label for="p">Phone (optional)</label><input id="p" type="tel" name="phone" autocomplete="tel"></div>
+          <div class="f"><label for="t">I am planning</label>
+            <select id="t" name="topic"><option>Buying a home</option><option>Selling a home</option><option>Moving after many years</option><option>Selling and buying together</option><option>Not sure yet</option></select></div>
+        </div>
+        <div class="f"><label for="w">When are you hoping to move?</label>
+          <select id="w" name="when"><option>As soon as possible</option><option>In the next 3 months</option><option>In 3 to 6 months</option><option>Later, I am just planning</option></select></div>
+        <div class="f"><label for="m">Anything Fara should know</label><textarea id="m" name="message"></textarea></div>
+        <button class="btn" type="submit">Send message <svg class="sym" aria-hidden="true"><use href="#i-send"/></svg></button>
+        <p class="ok" id="ok" role="status" hidden>Thank you. Your email app should open with your message ready to send.</p>
+      </form>
+    </div></div>
+  </section>
+</main>
+
+<footer>
+  <div class="invite">
+    <div class="l"><h2>Plan your move.</h2><a class="btn sand" href="#contact">Say hello <svg class="sym" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+    <ul>
+      <li><a href="#credentials"><svg class="sym" aria-hidden="true"><use href="#i-arrow"/></svg>Credentials</a></li>
+      <li><a href="#services"><svg class="sym" aria-hidden="true"><use href="#i-arrow"/></svg>Services</a></li>
+      <li><a href="#questions"><svg class="sym" aria-hidden="true"><use href="#i-arrow"/></svg>Questions</a></li>
+      <li><a href="#contact"><svg class="sym" aria-hidden="true"><use href="#i-arrow"/></svg>Contact</a></li>
+    </ul>
+  </div>
+  <p class="credits"><span>A design concept prepared for Fara Foroghi. Not an official website.</span><span>Photographs via Unsplash and Picsum: Paul Evans, Padurariu Alexandru, Breather, hieu le, Brennan Ehrhardt, Anthony DELANOIX.</span></p>
+  <div class="cropname" id="cropname" aria-hidden="true">F<i>o</i>r<i>o</i>ghi</div>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What does SRS mean if I am selling a long-time home?","acceptedAnswer":{"@type":"Answer","text":"Seniors Real Estate Specialist training covers the decisions that come with moving after many years: timing, family involvement, right-sizing and the practical details."}},
+{"@type":"Question","name":"What does a buyer's representative do?","acceptedAnswer":{"@type":"Answer","text":"The ABR designation is about being on the buyer's side of the table through the search, the offer and the close."}},
+{"@type":"Question","name":"Can you help me sell and buy at the same time?","acceptedAnswer":{"@type":"Answer","text":"Yes. The two timelines are planned together."}}]}
+</script>
+<script>
+(function(){
+  var d=document, root=d.documentElement, reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  /* fit the name to the viewport once the display face has loaded */
+  function fit(){
+    var hero=d.getElementById('name');
+    var probe=d.createElement('span');
+    probe.style.cssText='position:absolute;left:-9999px;top:0;white-space:nowrap;font:800 100px/1 Unbounded,sans-serif;letter-spacing:-.045em;text-transform:uppercase;visibility:hidden';
+    probe.textContent='Foroghi'; d.body.appendChild(probe);
+    var w=probe.getBoundingClientRect().width;
+    var avail=root.clientWidth-parseFloat(getComputedStyle(hero.parentNode).paddingLeft)*2;
+    root.style.setProperty('--mono',(100*avail*0.97/w).toFixed(2)+'px');
+    probe.style.letterSpacing='-.06em'; w=probe.getBoundingClientRect().width;
+    root.style.setProperty('--foot',(100*root.clientWidth*1.12/w).toFixed(2)+'px');
+    probe.remove();
+  }
+  fit();
+  if(d.fonts&&d.fonts.ready){d.fonts.ready.then(fit)}
+  addEventListener('resize',fit);
+
+  /* masked headline, then the two O's light */
+  var os=[].slice.call(d.querySelectorAll('#name i, #cropname i'));
+  [].slice.call(d.querySelectorAll('#name i')).forEach(function(el,i){setTimeout(function(){el.classList.add('on')},reduce?0:1100+i*500)});
+  requestAnimationFrame(function(){requestAnimationFrame(function(){root.classList.add('go')})});
+  if(reduce){os.forEach(function(el){el.classList.add('on')})}
+
+  /* entrances */
+  var items=[].slice.call(d.querySelectorAll('[data-r]'));
+  if(reduce||!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('in')})}
+  else{
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    items.forEach(function(e){io.observe(e)});
+  }
+
+  /* the live thing: switch a light on, the picture and the answer follow */
+  var subj={buy:'Buying a home',sell:'Selling a home',down:'Moving after many years'};
+  var btns=[].slice.call(d.querySelectorAll('.light')), panes=[].slice.call(d.querySelectorAll('.out [data-for]')), shots=[].slice.call(d.querySelectorAll('.shot img'));
+  var topic=d.getElementById('t');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      var k=b.getAttribute('data-k');
+      btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+      panes.forEach(function(p){p.classList.toggle('show',p.getAttribute('data-for')===k)});
+      shots.forEach(function(s){s.classList.toggle('show',s.getAttribute('data-k')===k)});
+      if(topic){topic.value=subj[k]}
+    });
+  });
+
+  /* contact form: opens the visitor's email app with everything filled in */
+  var form=d.getElementById('hello'), ok=d.getElementById('ok');
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var g=function(id){return d.getElementById(id).value};
+      var body='Hi Fara,\n\n'+g('m')+'\n\nPlanning: '+g('t')+'\nTiming: '+g('w')+'\n\nName: '+g('n')+'\nEmail: '+g('e')+(g('p')?'\nPhone: '+g('p'):'');
+      ok.hidden=false;
+      location.href='mailto:?subject='+encodeURIComponent(g('t')+' | hello Fara')+'&body='+encodeURIComponent(body);
+    });
+  }
+})();
+</script>
+</body>
+</html>
